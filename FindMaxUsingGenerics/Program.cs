@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,37 +9,37 @@ namespace FindMaxUsingGenerics
 {
     internal class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Find maximum number using generics");
+            Console.WriteLine("Welcome to Find maximum string using generics");
 
             Console.WriteLine("Test case 1:");
 
-            float result1 = GetMax(30.13f, 10.47f, 25.11f);
-            Console.WriteLine("Gievn max number at 1st position: " + result1);
+            string result1 = GetMax("Peach", "Apple", "Banana");
+            Console.WriteLine("Given max string at 1st position: " + result1);
 
             Console.WriteLine("Test case 2:");
 
-            float result2 = GetMax(20.25f, 33.41f, 50.28f);
-            Console.WriteLine("Gievn max number at 2nd position: " + result2);
+            string result2 = GetMax("Grapes", "Watermelon", "Orange");
+            Console.WriteLine("Given max string at 2nd position: " + result2);
 
             Console.WriteLine("Test case 3:");
 
-            float result3 = GetMax(30.13f, 25.88f, 60.34f);
-            Console.WriteLine("Gievn max number at 3rd position: " + result3);
+            string result3 = GetMax("Mango", "Kiwi", "Pineapple");
+            Console.WriteLine("Given max string at 3rd position: " + result3);
 
             Console.ReadLine();
         }
 
-        static float GetMax(float num1, float num2, float num3)
+        static string GetMax(string str1, string str2, string str3)
         {
-            float max = num1;
+            string max = str1;
 
-            if (num2 > max)
-                max = num2;
+            if (string.Compare(str2, max) > 0)
+                max = str2;
 
-            if (num3 > max)
-                max = num3;
+            if (string.Compare(str3, max) > 0)
+                max = str3;
 
             return max;
         }
