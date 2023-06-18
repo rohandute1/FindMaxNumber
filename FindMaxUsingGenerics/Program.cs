@@ -11,20 +11,15 @@ namespace FindMaxUsingGenerics
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Find maximum number using generics");
-            int num1, num2, num3;
+    
+            int result1 = GetMax(30, 10, 25);
+            Console.WriteLine("Test case 1:- Gievn max number at 1st position: " + result1);
 
-            Console.WriteLine("Enter the first number:");
-            num1 = int.Parse(Console.ReadLine());
+            int result2 = GetMax(20, 33, 50);
+            Console.WriteLine("Test case 2:- Gievn max number at 2nd position: " + result2);
 
-            Console.WriteLine("Enter the second number:");
-            num2 = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Enter the third number:");
-            num3 = int.Parse(Console.ReadLine());
-
-            int max = GetMax(num1, num2, num3);
-
-            Console.WriteLine("Maximum number: " + max);
+            int result3 = GetMax(30, 25, 60);
+            Console.WriteLine("Test case 3:- Gievn max number at 3rd position: " + result3);
 
             Console.ReadLine();
         }
