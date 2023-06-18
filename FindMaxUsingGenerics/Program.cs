@@ -8,31 +8,31 @@ namespace FindMaxUsingGenerics
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("Welcome to Find maximum number using generics");
 
             Console.WriteLine("Test case 1:");
 
-            int result1 = GetMax(30, 10, 25);
+            float result1 = GetMax(30.13f, 10.47f, 25.11f);
             Console.WriteLine("Gievn max number at 1st position: " + result1);
 
             Console.WriteLine("Test case 2:");
 
-            int result2 = GetMax(20, 33, 50);
+            float result2 = GetMax(20.25f, 33.41f, 50.28f);
             Console.WriteLine("Gievn max number at 2nd position: " + result2);
 
             Console.WriteLine("Test case 3:");
 
-            int result3 = GetMax(30, 25, 60);
+            float result3 = GetMax(30.13f, 25.88f, 60.34f);
             Console.WriteLine("Gievn max number at 3rd position: " + result3);
 
             Console.ReadLine();
         }
 
-        static int GetMax(int num1, int num2, int num3)
+        static float GetMax(float num1, float num2, float num3)
         {
-            int max = num1;
+            float max = num1;
 
             if (num2 > max)
                 max = num2;
