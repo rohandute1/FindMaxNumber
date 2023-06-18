@@ -11,35 +11,32 @@ namespace FindMaxUsingGenerics
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Find maximum string using generics");
+            Console.WriteLine("Welcome to Find maximum using generics");
 
-            Console.WriteLine("Test case 1:");
+            Console.WriteLine("Integers");
+            int result1 = GetMax<int>(30, 10, 25);
+            Console.WriteLine("Given max number at 1st position: " + result1);
 
-            string result1 = GetMax("Peach", "Apple", "Banana");
-            Console.WriteLine("Given max string at 1st position: " + result1);
+            Console.WriteLine("Float");
+            float result2 = GetMax<float>(20.1f, 33.7f, 50.9f);
+            Console.WriteLine("Given max number at 2nd position: " + result2);
 
-            Console.WriteLine("Test case 2:");
-
-            string result2 = GetMax("Grapes", "Watermelon", "Orange");
-            Console.WriteLine("Given max string at 2nd position: " + result2);
-
-            Console.WriteLine("Test case 3:");
-
-            string result3 = GetMax("Mango", "Kiwi", "Pineapple");
+            Console.WriteLine("String");
+            string result3 = GetMax<string>("Apple", "Peach", "Banana");
             Console.WriteLine("Given max string at 3rd position: " + result3);
 
             Console.ReadLine();
         }
 
-        static string GetMax(string str1, string str2, string str3)
+        static T GetMax<T>(T val1, T val2, T val3) where T : IComparable
         {
-            string max = str1;
+            T max = val1;
 
-            if (string.Compare(str2, max) > 0)
-                max = str2;
+            if (val2.CompareTo(max) > 0)
+                max = val2;
 
-            if (string.Compare(str3, max) > 0)
-                max = str3;
+            if (val3.CompareTo(max) > 0)
+                max = val3;
 
             return max;
         }
